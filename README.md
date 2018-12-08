@@ -1,4 +1,4 @@
-# WSL - Windows Subsystem for Linux
+# WSL Being Productive Under Corporate Restrictive Policy
 
 Big corporations may hinder an employees productivity with restrictive policies, narrowing the employees toolset down to Internet Explorer 11, Microsoft command line, Putty, and other installables. Some corporations even shut down Windows Store, so that the employee is not able to install Windows Subsystem for Linux.
 
