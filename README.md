@@ -34,40 +34,28 @@ Big corporations may hinder an employees productivity with restrictive policies,
 
 1. In the target folder, `execute ubuntu1804.exe`
 
-## 3. Enable Network for Apt
+## 3. Enable Network for apt, curl, and wget
 
-1. Edit the apt config file:
-
-    ```bash
-    sudo nano /etc/apt/apt.conf
-    ```
-
-1. Paste the following (with right mouse button):
+1. Enter your username, password, and proxy settings in the script:
 
     ```bash
-    Acquire::http::Proxy "http://<username>:<password>@<proxyurl>:<proxyport>";
+    echo export http_proxy=\"http://<username>:<password>@<proxy-url>:<proxy-port>/\" >> ~/.bashrc
+    echo insecure >> ~/.curlrc
+    source ~/.bashrc
+    source ~/.curlrc
     ```
+    
+## 4. Set Proxy Variables
 
-1. Press `ctrl-x` + `y` to save and exit
+1. Run the script in this repo to set additional proxy settings, install Pipenv and Pyenv:
+
+    ```bash
+    curl https://raw.githubusercontent.com/Menziess/WSL-Being-Productive-Under-Corporate-Restrictive-Policy/master/mad_scientist.sh | bash
+    ```
+    
 1. Download updates:
 
     ```bash
     sudo apt update -y
     sudo apt dist-upgrade
-    ```
-
-## 4. Set Proxy Variables
-
-1. Edit environment file:
-
-    ```bash
-    sudo nano /etc/environment
-    ```
-
-1. Add the following lines:
-
-    ```bash
-    http_proxy="http://<username>:<password>@<proxyurl>:<proxyport>"
-    https_proxy="http://<username>:<password>@<proxyurl>:<proxyport>"
-    ftp_proxy="http://<username>:<password>@<proxyurl>:<proxyport>"
     ```
