@@ -36,11 +36,12 @@ Big corporations may hinder an employees productivity with restrictive policies,
 
 ## 3. Enable Network for apt, curl, and wget
 
-1. Enter your username, password, and proxy settings in the script:
+1. Enter your username, password, and proxy settings in the following script, and run it:
 
     ```bash
     echo export http_proxy=http://<username>:<password>@<proxy-url>:<proxy-port>/ >> ~/.bashrc
     echo export HTTPS_PROXY=$http_proxy >> ~/.bashrc
+    echo "check_certificate = off" >> ~/.wgetrc
     echo insecure >> ~/.curlrc
     source ~/.bashrc
     ```
