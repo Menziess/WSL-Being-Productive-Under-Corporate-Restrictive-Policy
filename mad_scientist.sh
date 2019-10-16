@@ -16,8 +16,7 @@ if ! which git &>/dev/null; then
     exit 1
 fi
 
-echo "> Setting apt, curl, and wget config settings"
-echo "Acquire::http::Proxy $http_proxy;" >> /etc/apt/apt.conf
+echo "> Setting curl and wget config settings"
 echo "check_certificate = off" >> ~/.wgetrc
 echo insecure >> ~/.curlrc
 
