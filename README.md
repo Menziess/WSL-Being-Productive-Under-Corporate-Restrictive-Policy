@@ -42,7 +42,6 @@ Big corporations may hinder an employees productivity with restrictive policies,
     echo export http_proxy=http://<username>:<password>@<proxy-url>:<proxy-port>/ >> ~/.bashrc
     echo insecure >> ~/.curlrc
     source ~/.bashrc
-    source ~/.curlrc
     ```
     
 ## 4. Set Proxy Variables
