@@ -16,20 +16,12 @@ if ! which git &>/dev/null; then
     exit 1
 fi
 
-echo "> Setting curl and wget config settings"
-echo "check_certificate = off" >> ~/.wgetrc
-echo insecure >> ~/.curlrc
-
 echo "> Setting some ~/.bashrc commands"
 cat >>~/.bashrc <<EOL
-
-# Proxy settings
-export HTTP_PROXY=$http_proxy
-export HTTPS_PROXY=$http_proxy
-export FTP_PROXY=$http_proxy
-export DNS_PROXY=$http_proxy
-export RSYNC_PROXY=$http_proxy
-export ALL_PROXY=$http_proxy
+export FTP_PROXY=\$http_proxy
+export DNS_PROXY=\$http_proxy
+export RSYNC_PROXY=\$http_proxy
+export ALL_PROXY=\$http_proxy
 export NO_PROXY="localhost"
 
 # Pipenv
@@ -43,4 +35,5 @@ git config --global http.proxyAuthMethod 'basic'
 EOL
 
 echo "> Installing pyenv"
+source ~/.bashrc
 curl -s -S -L https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash
