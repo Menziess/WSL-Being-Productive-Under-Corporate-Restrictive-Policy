@@ -40,6 +40,7 @@ Big corporations may hinder an employees productivity with restrictive policies,
 
     ```bash
     echo export http_proxy=http://<username>:<password>@<proxy-url>:<proxy-port>/ >> ~/.bashrc
+    echo export HTTPS_PROXY=$http_proxy >> ~/.bashrc
     echo insecure >> ~/.curlrc
     source ~/.bashrc
     ```
