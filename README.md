@@ -39,7 +39,7 @@ Big corporations may hinder an employees productivity with restrictive policies,
 1. Enter your username, password, and proxy settings in the script:
 
     ```bash
-    echo export http_proxy=\"http://<username>:<password>@<proxy-url>:<proxy-port>/\" >> ~/.bashrc
+    echo export http_proxy=http://<username>:<password>@<proxy-url>:<proxy-port>/ >> ~/.bashrc
     echo insecure >> ~/.curlrc
     source ~/.bashrc
     source ~/.curlrc
