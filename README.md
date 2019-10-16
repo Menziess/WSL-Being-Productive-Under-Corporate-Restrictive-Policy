@@ -46,15 +46,15 @@ Big corporations may hinder an employees productivity with restrictive policies,
     
 ## 4. Set Proxy Variables
 
-1. Run the script in this repo to set additional proxy settings, install Pipenv and Pyenv:
-
-    ```bash
-    curl https://raw.githubusercontent.com/Menziess/WSL-Being-Productive-Under-Corporate-Restrictive-Policy/master/mad_scientist.sh | bash
-    ```
-    
 1. Download updates:
 
     ```bash
     sudo apt update -y
     sudo apt dist-upgrade
+    ```
+    
+1. Run the script in this repo to set additional proxy settings, install Pipenv and Pyenv:
+
+    ```bash
+    curl https://raw.githubusercontent.com/Menziess/WSL-Being-Productive-Under-Corporate-Restrictive-Policy/master/mad_scientist.sh | bash
     ```
