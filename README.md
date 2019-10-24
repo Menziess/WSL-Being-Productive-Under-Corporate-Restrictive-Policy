@@ -46,13 +46,13 @@ Big corporations may hinder an employees productivity with restrictive policies,
     source ~/.bashrc
     ```
     
-## 4. Set Proxy Variables
+## 4. Update packages and distro
 
 1. Download updates:
 
     ```bash
     sudo apt update -y
-    sudo apt dist-upgrade
+    sudo apt dist-upgrade -y
     ```
     
 1. Run the script in this repo to set additional proxy settings, install Pipenv and Pyenv:
